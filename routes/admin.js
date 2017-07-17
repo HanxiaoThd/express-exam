@@ -2,6 +2,9 @@ var express=require("express");
 var router = express.Router();
 var md5=require("./common/md5");
 var connect=require("./common/mysql");
+var xlsx = require('node-xlsx');
+var multer  = require('multer');
+
 /*
 *
 * */
