@@ -4,7 +4,7 @@ var md5=require("./common/md5");
 var connect=require("./common/mysql");
 var xlsx = require('node-xlsx');
 var multer  = require('multer');
-
+var upload = multer({ dest: 'uploads/' });
 /*
 *
 * */
