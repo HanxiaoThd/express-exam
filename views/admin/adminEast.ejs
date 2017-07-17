@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<style>
+    form{
+        margin-top:20px;
+        padding:10px;
+        box-sizing: border-box;
+    }
+</style>
+
+    <table class="table">
+        <tr class="active" style="text-align: center">
+            <th class="active">
+                方向id
+            </th>
+            <th class="active">方向名</th>
+            <th class="active">操作</th>
+        </tr>
+        <%for (var i=0;i<result.length;i++){%>
+        <tr class="active">
+            <td draggable="true"><%=result[i].did%></td>
+            <td><%=result[i].dname%></td>
+            <td>
+                <a href="/admin/delDirection?did=<%=result[i].did%>">删除</a>
+                <a href="/admin/changeDirection?did=<%=result[i].did%>">编辑</a>
+            </td>
+        </tr>
+        <%}%>
+    </table>
+
+
+</body>
+
+</html>

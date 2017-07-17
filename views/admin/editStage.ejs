@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<style>
+    form{
+        margin-top:20px;
+        padding:10px;
+        box-sizing: border-box;
+    }
+</style>
+
+<table class="table">
+    <tr class="active" style="text-align: center">
+        <th class="active">
+            阶段id
+        </th>
+        <th class="active">阶段名</th>
+        <th class="active">操作</th>
+    </tr>
+    <%for (var i=0;i<result.length;i++){%>
+    <tr class="active">
+        <td draggable="true"><%=result[i].stid%></td>
+        <td><%=result[i].stname%></td>
+        <td>
+            <a href="/admin/delStage?stid=<%=result[i].stid%>">删除</a>
+            <a href="/admin/changeStage?stid=<%=result[i].stid%>">编辑</a>
+        </td>
+    </tr>
+    <%}%>
+</table>
+
+
+</body>
+
+</html>

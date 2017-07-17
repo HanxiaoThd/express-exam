@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<!--
+添加学生，添加老师，添加管理员？ 添加班级，添加阶段，添加方向
+-->
+<section id="title">
+    <h1>后台管理系统</h1>
+    <p><span><a href="" style="color: #ffffff;">进入主页 </a> </span> 欢迎 <%=user%><a href="index.php?m=admin&f=login&a=out">退出登录</a></p>
+</section>
+<section id="main">
+    <ul id="box">
+        <li>
+            <span>管理员管理</span>
+            <ul>
+                <li>
+                    <a href="/admin/addRoles" target="window">添加管理员</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>方向管理</span>
+            <ul >
+                <li>
+                    <a href="/admin/addEast" target="window">添加方向</a>
+                </li>
+                <li>
+                    <a href="/admin/adminEast" target="window">管理方向</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>阶段管理</span>
+            <ul>
+                <li>
+                    <a href="/admin/moment" target="window">添加阶段</a>
+                </li>
+                <li>
+                    <a href="/admin/editMoment" target="window">管理阶段</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span>老师管理</span>
+            <ul>
+                <li>
+                    <a href="/admin/teach" target="window">添加老师</a>
+                    <a href="/admin/adminTeach" target="window">管理老师</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <span>用户管理</span>
+            <ul>
+                <li>
+                    <a href="index.php?m=admin&f=manger" target="window">管理员管理</a>
+                </li>
+                <li>
+                    <a href="index.php?m=admin&f=user" target="window">用户管理</a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+
+    <iframe src="" frameborder="0" name="window">
+
+    </iframe>
+</section>
+</body>
+<script>
+    $('#box >li >span').click(function () {
+        $(this).next('ul').slideToggle('fast');
+    })
+</script>
+</body>
+</html>

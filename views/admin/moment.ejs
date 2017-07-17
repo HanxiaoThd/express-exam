@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>阶段</title>
+</head>
+<body>
+<form method="get" action="/admin/addStage" id="form" style="margin-top: 20px;margin-left: 20px;">
+    <div class="form-group">
+        <label for="">所属方向</label>
+        <select name="did" id="">
+            <%for (var i=0;i<result.length;i++) {%>
+            <option value="<%=result[i].did%>"><%=result[i].dname%></option>
+            <%}%>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">阶段名称</label>
+        <input type="text" class="form-control" name="stname" id="exampleInput" placeholder="阶段" required>
+    </div>
+
+    <button type="submit" class="btn btn-default">创建</button>
+</form>
+
+</body>
+</html>
